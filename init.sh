@@ -9,5 +9,6 @@ sudo ln -s /home/box/web/etc/ask.py   /etc/gunicorn.d/ask.py
 sudo /etc/init.d/gunicorn restart
 sudo /etc/init.d/mysql restart
 sudo mysql -uroot -e "CREATE DATABASE IF NOT EXISTS ask;"
-sudo mysql -uroot -e "CREATE USER 'web'@'localhost' IDENTIFIED BY 'web';"
-sudo mysql -uroot -e "GRANT ALL ON web.* TO 'web'@'localhost';"
+sudo mysql -uroot -e "CREATE USER 'web'@'localhost'"
+sudo mysql -uroot -e "SET PASSWORD FOR 'web'@'localhost' = PASSWORD('web')"
+sudo mysql -uroot -e "GRANT ALL ON ask.* TO 'web'@'localhost'"
