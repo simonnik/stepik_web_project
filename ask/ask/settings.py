@@ -83,8 +83,8 @@ DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ask',
-        'USER': 'web',
-        'PASSWORD': 'web',
+        'USER': 'root',
+        'PASSWORD': '',
     }
 }
 
