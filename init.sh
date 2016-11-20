@@ -7,4 +7,5 @@ sudo ln -s /home/box/web/etc/hello.py   /etc/gunicorn.d/hello.py
 sudo rm -f /etc/gunicorn.d/ask.py
 sudo ln -s /home/box/web/etc/ask.py   /etc/gunicorn.d/ask.py
 sudo /etc/init.d/gunicorn restart
-#sudo /etc/init.d/mysql start
+sudo /etc/init.d/mysql restart
+sudo mysql -uroot -e "CREATE DATABASE IF NOT EXISTS ask;"
