@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head></head>
-<body>
-{% for question in questions%}
-<a href="{{paginator.baseurl}}/{{question.id}}/">{{question.title}}</a>
-{% endfor %}
-</body>
+    <head></head>
+    <body>
+        {% for question in questions%}
+            <a href="{{paginator.baseurl}}/{{question.id}}/">{{question.title}}</a>
+        {% endfor %}
+    </body>
 </html>
