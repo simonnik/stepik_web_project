@@ -12,4 +12,5 @@ sudo mysql -uroot -e "CREATE DATABASE IF NOT EXISTS ask;"
 sudo mysql -uroot -e "CREATE USER 'web'@'localhost'"
 sudo mysql -uroot -e "SET PASSWORD FOR 'web'@'localhost' = PASSWORD('web')"
 sudo mysql -uroot -e "GRANT ALL ON ask.* TO 'web'@'localhost'"
-sudo pip install pymysql
+python ask/manage.py syncdb
+
